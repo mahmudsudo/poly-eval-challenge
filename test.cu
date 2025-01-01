@@ -4,7 +4,7 @@
 
 #define HOST_DEVICE_INLINE __host__ __device__ __forceinline__
 #define HOST_INLINE __host__ __forceinline__
-#define P_MOD 10
+#define P_MOD 32843
 
 template <unsigned P = P_MOD>
 class Dummy_Scalar
@@ -68,7 +68,7 @@ int main(int argc, char** argv)
   float time;
 
   // test parameters
-  int coeffs_log_size = (argc > 1) ? atoi(argv[1]) : 20;
+  int coeffs_log_size = (argc > 1) ? atoi(argv[1]) : 22;
   int coeffs_size = 1 << coeffs_log_size;
   int domain_size = (argc > 2) ? atoi(argv[2]) : 7;
   int batch_size = (argc > 3) ? atoi(argv[3]) : 10;
